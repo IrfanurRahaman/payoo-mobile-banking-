@@ -16,10 +16,10 @@ document.getElementById('cashout-btn').addEventListener('click', function(){
         alert('Invalid Amount');
         return;
     }
-        // calculating balance
-    const balanceText = document.getElementById('balance');
-    const balance = Number(balanceText.innerText.replace(/[^\d.]/g, ""));
-    const newBalance = balance - cashOutAmount;
+        // getting main current balance
+    const currentBalance =  getBalance();
+        // calculating newbalance
+    const newBalance = currentBalance - Number(cashOutAmount);
 
         // varifying if the cashout amount is not bigger then newbalance
     if(newBalance < cashOutAmount){
@@ -27,7 +27,7 @@ document.getElementById('cashout-btn').addEventListener('click', function(){
         return;
     }
     else{
-        balanceText.innerText = newBalance;
+        setNewBalance(newBalance);
     }     
     
         // varifying Pin

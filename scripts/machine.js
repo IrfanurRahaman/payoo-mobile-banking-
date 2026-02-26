@@ -1,6 +1,20 @@
-
+// 
 function GetInputValue(id){
     const input = document.getElementById(id);
     const value = input.value;
     return value;
+}
+
+
+// get current balance function
+function getBalance(){
+    const balanceText = document.getElementById('balance');
+    const balance = balanceText.innerText;
+    return Number(balance);
+}
+
+// set new balance funcation
+function setNewBalance(value){
+    const balanceText = document.getElementById('balance');
+    balanceText.innerText = value;
 }

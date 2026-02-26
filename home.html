@@ -53,7 +53,7 @@
           </div>
           <div class="balance-info">
             <h1 class="font-extrabold text-[18px]">
-              <span id="balance">$45000</span>
+              <span>$<span id="balance">45000</span></span>
             </h1>
             <p class="text-neutral/50">Available Balance</p>
           </div>
@@ -117,9 +117,42 @@
       </section>
     </main>
 
-    <!-- footer section -->
+          <!-- add money section -->
 
-    <footer class="max-w-[400px] mx-auto">
+    <section class="add-money max-w-[400px] mx-auto">
+      <h1 class="font-semibold text-xl py-4">Add Money</h1>
+      
+      <div>
+        <fieldset
+          class="fieldset bg-base-100 border-base-300 w-full max-w-[400px] mx-auto rounded-box border p-8 shadow rounded-3xl">
+
+          <fieldset class="fieldset">
+            <label class="label font-bold text-neutral text-[16px]">Select a Bank</label>
+            <select id="add-money-bank" class="select input bg-base-200 w-full rounded-full">
+              <option disabled selected>Select Bank</option>
+              <option value="DBBL">DBBL</option>
+              <option value="SEBL">SEBL</option>
+              <option value="CBL">CBL</option>
+            </select>
+          </fieldset>
+
+          <label class="label font-bold text-neutral text-[16px]">Bank Account Number</label>
+          <input id="add-money-number" type="email" maxlength="11" class="input bg-base-200 w-full rounded-full" placeholder="Enter 11 digit account number" />
+
+          <label class="label font-bold text-neutral text-[16px]">Amount to Add</label>
+          <input id="add-money-amount" type="number" maxlength="4" class="input w-full   bg-base-200 rounded-full" placeholder="Add Amount to withdraw" />
+
+          <label class="label font-bold text-neutral text-[16px]">Pin Number</label>
+          <input id="add-money-pin" type="password" maxlength="4" class="input w-full bg-base-200 rounded-full" placeholder="Enter 4 Digit Pin" />
+
+          <button id="add-money-btn" class="btn btn-primary p-6 rounded-full mt-4">Add Money</button>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- cashout section -->
+
+    <section class="cashout-section max-w-[400px] mx-auto hidden">
       <h1 class="font-semibold text-xl py-4">Cash Out</h1>
 
       <div>
@@ -138,9 +171,11 @@
           <button id="cashout-btn" class="btn btn-primary p-6 rounded-full mt-4">Withdraw Money</button>
         </fieldset>
       </div>
-    </footer>
+    </section>
+
 
     <script src="scripts/machine.js"></script>
+    <script src="scripts/addMoney.js"></script>
     <script src="scripts/cashout.js"></script>
   </body>
 </html>
