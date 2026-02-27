@@ -36,7 +36,7 @@ document.getElementById('cashout-btn').addEventListener('click', function(){
         return;
     }
     else{
-        alert('Cashout Successfull');
+        alert('Cashout Successful');
     }
     
 })

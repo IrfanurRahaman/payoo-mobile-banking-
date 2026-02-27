@@ -44,8 +44,8 @@
     </style>
   </head>
 
-  <body class="min-h-screen max-w-md mx-auto bg-base-200">
-    <header class="bg-white">
+  <body class="min-h-screen max-w-md mx-auto bg-base-200 ">
+    <header class="bg-white sticky top-0 z-100 border-b border-black/30">
       <section class="max-w-[400px] mx-auto flex justify-between items-center pt-11 pb-3">
         <div class="flex gap-2">
           <div class="w-[60px]">
@@ -63,8 +63,6 @@
           Out</a>
       </section>
     </header>
-
-    <hr class="opacity-30" />
 
     <!-- buttons section -->
 
@@ -84,42 +82,48 @@
         <!--6 buttons -->
 
         <div class="buttons grid grid-cols-3 gap-4">
-          <button class="btn flex-col h-full rounded-xl px-4 py-5">
+          <button onclick="showOnly('add-money-section')" class="btn btn-soft btn-primary flex-col h-full rounded-xl px-4 py-5">
             <img src="assets/opt-1.png" alt="" />
-            <p class="text-neutral/70">Add Money</p>
+            <p>Add Money</p>
           </button>
 
-          <button class="btn flex-col h-full rounded-xl px-4 py-5">
+          <button onclick="showOnly('cashout-section')" class="btn btn-soft btn-primary flex-col h-full rounded-xl px-4 py-5">
             <img src="assets/opt-2.png" alt="" />
-            <p class="text-neutral/70">Cashout</p>
+            <p>Cashout</p>
           </button>
 
-          <button class="btn flex-col h-full rounded-xl px-2 py-5">
+          <button class="btn btn-soft btn-primary flex-col h-full rounded-xl px-2 py-5">
             <img src="assets/opt-3.png" alt="" />
-            <p class="text-neutral/70">Transfer Money</p>
+            <p>Transfer Money</p>
           </button>
 
-          <button class="btn flex-col h-full rounded-xl px-4 py-5">
+          <button class="btn btn-soft btn-primary flex-col h-full rounded-xl px-4 py-5">
             <img src="assets/opt-4.png" alt="" />
-            <p class="text-neutral/70">Get Bonus</p>
+            <p>Get Bonus</p>
           </button>
 
-          <button class="btn flex-col h-full rounded-xl px-4 py-5">
+          <button class="btn btn-soft btn-primary flex-col h-full rounded-xl px-4 py-5">
             <img src="assets/opt-5.png" alt="" />
-            <p class="text-neutral/70">Pay Bill</p>
+            <p>Pay Bill</p>
           </button>
 
-          <button class="btn flex-col h-full rounded-xl px-4 py-5">
+          <button class="btn btn-soft btn-primary flex-col h-full rounded-xl px-4 py-5">
             <img src="assets/opt-6.png" alt="" />
-            <p class="text-neutral/70">Transactions</p>
+            <p>Transactions</p>
           </button>
         </div>
       </section>
     </main>
+    
+      <!-- neutral section -->
+    <section id="neutral-section" class=" flex flex-col justify-center items-center text-center mt-28">
+      <img class="w-[100px] mb-4" src="assets/jobs.png" alt="">
+      <h1 class="font-medium text-xl text-[#7DA8FF]">Please Select a Button Above <br> To Make Transactions !</h1>
+    </section>
 
           <!-- add money section -->
 
-    <section class="add-money max-w-[400px] mx-auto">
+    <section id="add-money-section" class=" max-w-[400px] mx-auto hidden">
       <h1 class="font-semibold text-xl py-4">Add Money</h1>
       
       <div>
@@ -152,7 +156,7 @@
 
     <!-- cashout section -->
 
-    <section class="cashout-section max-w-[400px] mx-auto hidden">
+    <section id="cashout-section" class="max-w-[400px] mx-auto hidden">
       <h1 class="font-semibold text-xl py-4">Cash Out</h1>
 
       <div>

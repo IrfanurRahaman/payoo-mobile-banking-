@@ -28,6 +28,7 @@ document.getElementById('add-money-btn').addEventListener('click', function(){
         setNewBalance(addedMoney);
     }
 
-    alert('Add Money Successful');
+    alert(`Added Money Bdt ${addAmount} successfully 
+    ${new Date()}`);
 
 })
