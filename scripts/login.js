@@ -13,7 +13,7 @@ document.getElementById("login-btn").addEventListener("click" , function () {
 
   if(number == '01812323453' && pin == '2244'){
     alert('Login Success');
-    window.location.assign('/home.html')
+    window.location.assign('home.html')
 
   }else{
     alert('Login Failed');
