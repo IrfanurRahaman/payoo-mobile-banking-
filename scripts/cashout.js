@@ -37,6 +37,21 @@ document.getElementById('cashout-btn').addEventListener('click', function(){
     }
     else{
         alert('Cashout Successful');
+
+        // adding cashout history to transactions section
+
+        const transaction = document.getElementById('transaction-container');
+
+        const transactionDiv = document.createElement('div');
+
+        transactionDiv.innerHTML = `
+        <div class="transaction-card bg-white p-4 rounded-xl">
+          Cashout Bdt ${cashOutAmount} To Account : ${cashoutNumber} successful at
+            ${new Date()}
+        </div>
+        `
+
+        transaction.append(transactionDiv);
     }
     
 })

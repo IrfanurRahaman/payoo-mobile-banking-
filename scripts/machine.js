@@ -27,13 +27,13 @@ function showOnly(id){
     const addMoney = document.getElementById('add-money-section');
     const cashout = document.getElementById('cashout-section');
     const neutralSection = document.getElementById('neutral-section');
+    const transactionSection = document.getElementById('transaction-section');
 
-    
     addMoney.classList.add('hidden');    
     cashout.classList.add('hidden');    
     neutralSection.classList.add('hidden');
+    transactionSection.classList.add('hidden');
 
     document.getElementById(id).classList.remove('hidden');
-
 
 }

@@ -26,9 +26,27 @@ document.getElementById('add-money-btn').addEventListener('click', function(){
     else{
         const addedMoney = getBalance() + Number(addAmount);
         setNewBalance(addedMoney);
+        
+        alert(`Added Money Bdt ${addAmount} successfully 
+        ${new Date()}`);
+
+        // adding add money history to transaction section
+
+        const transaction = document.getElementById('transaction-container');
+
+        const transactionDiv = document.createElement('div');
+
+        transactionDiv.innerHTML = `
+        <div class="transaction-card bg-white p-4 rounded-xl">
+          Added Money Bdt ${addAmount} from Account : ${accountNo} successfully at
+            ${new Date()}
+        </div>
+        `
+
+        transaction.append(transactionDiv);
     }
 
-    alert(`Added Money Bdt ${addAmount} successfully 
-    ${new Date()}`);
+    
+
 
 })

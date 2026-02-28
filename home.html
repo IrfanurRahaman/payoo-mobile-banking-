@@ -107,14 +107,14 @@
             <p>Pay Bill</p>
           </button>
 
-          <button class="btn btn-soft btn-primary flex-col h-full rounded-xl px-4 py-5">
+          <button onclick="showOnly('transaction-section')" class="btn btn-soft btn-primary flex-col h-full rounded-xl px-4 py-5">
             <img src="assets/opt-6.png" alt="" />
             <p>Transactions</p>
           </button>
         </div>
       </section>
-    </main>
-    
+    </main> 
+
       <!-- neutral section -->
     <section id="neutral-section" class=" flex flex-col justify-center items-center text-center mt-12 sm:mt-28">
       <img class="w-[100px] mb-4" src="assets/jobs.png" alt="">
@@ -174,6 +174,15 @@
 
           <button id="cashout-btn" class="btn btn-primary p-6 rounded-full mt-4">Withdraw Money</button>
         </fieldset>
+      </div>
+    </section>
+
+            <!-- transactions section -->
+
+    <section id="transaction-section" class="max-w-[400px] mx-auto hidden">
+      <h1 class="font-semibold text-xl py-4">Transactions</h1>
+      <div id="transaction-container" class="space-y-4">
+ 
       </div>
     </section>
 
